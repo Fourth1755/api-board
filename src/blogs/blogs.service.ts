@@ -64,7 +64,7 @@ export class BlogsService {
       }
       return item
     })
-    return `This action updates a #${id} blog`;
+    return `Update blog ${id} success.`;
   }
 
   remove(id: number) {
