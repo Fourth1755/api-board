@@ -41,10 +41,23 @@ export class BlogsService {
       user_image: "https://cdn.myanimelist.net/images/characters/5/536830.jpg",
       comment: "",
     },
+    {
+      id: 3,
+      name: "The Beginning",
+      detail:
+        "The afterlife sitcom The Good Place comes to its culmination, the show’s two protagonists, Eleanor and Chidi, contemplate their future. Having lived thousands upon thousands of lifetimes together, and having experienced virtually everything this life has to offer, they are weary. It is time for it all to end. The show’s solution to this perpetual happiness-cum-weariness is extinction. When you have ",
+      community_id: 3,
+      community: "Food",
+      user_id: 2,
+      user_name: "Masachika Kuze",
+      user_image: "https://cdn.myanimelist.net/images/characters/4/536831.jpg",
+      comment: "",
+    },
   ];
   create(createBlogDto: CreateBlogDto) {
     const lastBlog = this.blogLsit.at(this.blogLsit.length-1)
     createBlogDto.id = lastBlog.id+1
+    //console.log(createBlogDto)
     this.blogLsit.push(createBlogDto)
     return 'This action adds a new blog';
   }
